@@ -46,9 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BeastManager.cs" />
+     <Compile Include="Assets\scripts\BeastManager.cs" />
      <Compile Include="Assets\scripts\ClickToDismiss.cs" />
      <Compile Include="Assets\scripts\DisplayTime.cs" />
+     <Compile Include="Assets\scripts\SoundOnClick.cs" />
      <Compile Include="Assets\scripts\SpriteChanger.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
