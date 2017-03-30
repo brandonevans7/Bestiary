@@ -23,8 +23,12 @@ public class BeastManager : MonoBehaviour {
 		if (foodOut) 
 		{
 
-			int rand = Random.Range (0, Beast.Length);
-			Beast [rand].SetActive (true);
+			int rand = Random.Range (1, Beast.Length);
+//			Beast [rand].SetActive (true);
+						for (int x = 0; x < rand; x++ )
+						{
+							Beast[x].SetActive(true);
+						}
 
 			//			for (int x = 0; x < Beast.Length; x++ )
 			//			{
