@@ -22,6 +22,6 @@ public class ClickToDismiss : MonoBehaviour {
 	}
 	void Finished()
 	{
-		Destroy (gameObject);
+		Destroy (gameObject, 5);
 	}
 }
