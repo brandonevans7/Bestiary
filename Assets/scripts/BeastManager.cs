@@ -8,6 +8,8 @@ public class BeastManager : MonoBehaviour {
 
 	public GameObject Food;
 
+
+
 	private bool foodOut;
 
 	// Use this for initialization
@@ -19,10 +21,11 @@ public class BeastManager : MonoBehaviour {
 		}
 
 		// check if the food was out 
-		foodOut = (PlayerPrefs.GetInt("foodOut") != 0);
-		if (foodOut) 
-		{
+		FoodTimeManager fm = Food.GetComponent<FoodTimeManager>();
 
+		if (fm.foodOut) 
+		{
+			Debug.Log ("food is out");
 			int rand = Random.Range (1, Beast.Length);
 //			Beast [rand].SetActive (true);
 						for (int x = 0; x < rand; x++ )
@@ -42,9 +45,5 @@ public class BeastManager : MonoBehaviour {
 	void Update () {
 
 	}
-	void OnDestroy()
-	{
-		foodOut = Food.GetComponent <SpriteChanger>().toggle;
-		PlayerPrefs.SetInt("foodOut", (foodOut? 1 : 0));
-	}
+
 }

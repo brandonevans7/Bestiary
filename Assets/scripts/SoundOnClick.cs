@@ -18,7 +18,6 @@ public class SoundOnClick : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		Debug.Log ("playsound");
 		audio.PlayOneShot(sound, 0.9F);
 	}
 }
