@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\Beast.cs" />
+     <Compile Include="Assets\scripts\BeastInfo.cs" />
      <Compile Include="Assets\scripts\BeastManager.cs" />
      <Compile Include="Assets\scripts\ClickToDismiss.cs" />
      <Compile Include="Assets\scripts\DepthByHeight.cs" />
@@ -53,6 +55,7 @@
      <Compile Include="Assets\scripts\FoodTimeManager.cs" />
      <Compile Include="Assets\scripts\SoundOnClick.cs" />
      <Compile Include="Assets\scripts\SpriteChanger.cs" />
+     <Compile Include="Assets\scripts\randomSpritePicker.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
