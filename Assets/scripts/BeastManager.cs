@@ -8,10 +8,13 @@ public class BeastManager : MonoBehaviour {
 
 	public GameObject Food;
 
+	public GameObject Poo;
+
 	private bool foodOut;
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log (Beast[0].rarity);
 		InitBeasts ();		
 		SaveActiveBeasts ();
 
@@ -101,12 +104,13 @@ public class BeastManager : MonoBehaviour {
 			return false;
 		}
 
-	
+
 	}
 
 	void CreatePoo(float x, float y)
 	{
-		Debug.Log ("create poo at pos " + x + ", " + y);
+
+		Instantiate (Poo, new Vector3(x,y,y),Quaternion.identity);
 	}
 
 	void OnDestroy()

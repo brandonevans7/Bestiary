@@ -16,7 +16,7 @@ public class BeastInfo : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void  Awake() {
 		beast = this.gameObject;
 	}
 	
