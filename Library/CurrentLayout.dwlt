@@ -266,7 +266,7 @@ MonoBehaviour:
     height: 839
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
-  m_Stats: 0
+  m_Stats: 1
   m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
@@ -346,9 +346,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.29033914, y: -0.3684522, z: -12}
+    m_Target: {x: 0.157564, y: -2.5193367, z: -12}
     speed: 2
-    m_Value: {x: 0.29033914, y: -0.3684522, z: -12}
+    m_Value: {x: 0.157564, y: -2.5193367, z: -12}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -375,14 +375,14 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.531171
+    m_Target: 7.843985
     speed: 2
-    m_Value: 8.531171
+    m_Value: 7.843985
   m_Ortho:
     m_Target: 1
     speed: 2
     m_Value: 1
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.078209005, y: 0.023024699, z: -0.0018069007, w: -0.9966694}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -481,23 +481,23 @@ MonoBehaviour:
     height: 347
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: d8fbffff000000006c270000
+    m_SelectedIDs: 96270000
+    m_LastClickedID: 10134
+    m_ExpandedIDs: 88a0fefff40effff225dffffe27cffff30daffffe8f5ffffb6fbffffd8fbffff00000000fe2600004627000096270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: BuyButton
-      m_OriginalName: BuyButton
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10202
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -543,7 +543,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/prefabs/Items
+    - Assets/prefabs
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -554,7 +554,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 10240000
     m_LastClickedID: 9232
-    m_ExpandedIDs: 00000000da240000f0240000382500009a250000d625000088260000a8260000ae260000
+    m_ExpandedIDs: 00000000cc240000e22400001e25000080250000ba25000068260000882600008e260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -582,7 +582,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 239}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000da240000f0240000382500009a250000b6250000d625000088260000a8260000ae260000
+    m_ExpandedIDs: 00000000cc240000e22400001e25000080250000ba25000068260000882600008e260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
