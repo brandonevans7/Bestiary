@@ -19,7 +19,7 @@ public class OpenShop : MonoBehaviour {
 	void OnMouseDown()
 	{
 		shop.SetActive (true);
-		shopManager sm = shop.GetComponent<shopManager> ();
-		sm.CreateItem ();
+//		shopManager sm = shop.GetComponent<shopManager> ();
+//		sm.CreateItem ();
 	}
 }

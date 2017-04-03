@@ -99,7 +99,9 @@ public class BeastManager : MonoBehaviour {
 			//CHANGE LATER!!!
 			int rand = Random.Range(1,10);
 
-			if (Beast [x].rarity == rand) {
+//			Debug.Log ("beast rarity: " + Beast [x].rarity + " compared to " + rand); 
+
+			if (Beast [x].rarity <= rand) {
 				return true;
 			} else {
 				return false;

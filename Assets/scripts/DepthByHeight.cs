@@ -20,6 +20,11 @@ public class DepthByHeight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		pos = this.transform.position;
+		depth = pos.y;
+		pos.z = depth;
+
+		this.transform.position = pos;
 		
 	}
 }
