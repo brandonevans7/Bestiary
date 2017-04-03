@@ -9,10 +9,11 @@ public class GlobalVars: MonoBehaviour  {
 	// Use this for initialization
 	void Start()
 	{
-		if(PlayerPrefs.GetInt("gold") != null)
+		if(PlayerPrefs.HasKey("gold"))
 		{
-			gold = PlayerPrefs.GetInt ("gold");
+		gold = PlayerPrefs.GetInt ("gold");
 		}
+
 	}
 
 	void OnDestroy()

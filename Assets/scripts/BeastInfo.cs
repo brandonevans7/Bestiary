@@ -11,6 +11,7 @@ public class BeastInfo : MonoBehaviour {
 	public string info1;
 	public string info2;
 	public string info3;
+	public int pooAmt;
 	public food favFood;
 	public GameObject beast;
 

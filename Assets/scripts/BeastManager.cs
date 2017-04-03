@@ -14,7 +14,6 @@ public class BeastManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log (Beast[0].rarity);
 		InitBeasts ();		
 		SaveActiveBeasts ();
 
@@ -41,7 +40,7 @@ public class BeastManager : MonoBehaviour {
 				//check if they were previously active
 				if (CheckIfWasActive (x)) {
 
-					CreatePoo (Beast [x].beast.transform.position.x, Beast [x].beast.transform.position.y);
+					CreatePoo (Beast [x].beast.transform.position.x, Beast [x].beast.transform.position.y,Beast[x].pooAmt);
 				} 
 			}
 		}
@@ -95,7 +94,12 @@ public class BeastManager : MonoBehaviour {
 	{
 		//check if food is out
 		if (FoodIsOut ()) {
-			if (Beast [x].rarity == 1) {
+
+			//spawn beast based on random rarity.  Anything has a shot 
+			//CHANGE LATER!!!
+			int rand = Random.Range(1,10);
+
+			if (Beast [x].rarity == rand) {
 				return true;
 			} else {
 				return false;
@@ -107,10 +111,12 @@ public class BeastManager : MonoBehaviour {
 
 	}
 
-	void CreatePoo(float x, float y)
+	void CreatePoo(float x, float y, int gold)
 	{
+		var obj = (GameObject)Instantiate (Poo, new Vector3(x,y,y),Quaternion.identity);
+		obj.GetComponent<CollectGold> ().goldamt = gold;
 
-		Instantiate (Poo, new Vector3(x,y,y),Quaternion.identity);
+//		Instantiate (Poo, new Vector3(x,y,y),Quaternion.identity);
 	}
 
 	void OnDestroy()

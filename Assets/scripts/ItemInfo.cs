@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Beast : MonoBehaviour {
+public class ItemInfo : MonoBehaviour {
+
+	public int cost;
 
 	// Use this for initialization
 	void Start () {
