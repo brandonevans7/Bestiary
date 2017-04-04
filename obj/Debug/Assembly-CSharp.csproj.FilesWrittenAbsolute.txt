@@ -40,3 +40,5 @@
 /Users/brandone/Desktop/playcrafting/Bestiary/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/brandone/Desktop/playcrafting/Bestiary/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/brandone/Desktop/playcrafting/Bestiary/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/brandone/Desktop/playcrafting/Bestiary/Temp/bin/Debug/UnityEngine.TestRunner.dll
+/Users/brandone/Desktop/playcrafting/Bestiary/Temp/bin/Debug/nunit.framework.dll

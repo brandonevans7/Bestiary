@@ -35,14 +35,14 @@ public class BeastManager : MonoBehaviour {
 			Beast [x].beast.SetActive (BeastCanSpawn (x));
 
 			//if beasts can't spawn
-			if (BeastCanSpawn (x) == false) {
+//			if (BeastCanSpawn (x) == false) {
 
 				//check if they were previously active
 				if (CheckIfWasActive (x)) {
 
 					CreatePoo (Beast [x].beast.transform.position.x, Beast [x].beast.transform.position.y,Beast[x].pooAmt);
 				} 
-			}
+//			}
 		}
 
 	}
@@ -97,9 +97,9 @@ public class BeastManager : MonoBehaviour {
 
 			//spawn beast based on random rarity.  Anything has a shot 
 			//CHANGE LATER!!!
-			int rand = Random.Range(1,10);
+			int rand = Random.Range(1,15);
 
-			if (Beast [x].rarity == rand) {
+			if (Beast [x].rarity >= rand) {
 				return true;
 			} else {
 				return false;
