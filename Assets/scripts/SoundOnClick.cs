@@ -5,10 +5,13 @@ using UnityEngine;
 public class SoundOnClick : MonoBehaviour {
 
 	public AudioClip sound;
-	private AudioSource auds;
+	public AudioSource auds;
 
 	void Start() {
-		auds = GetComponent<AudioSource>();
+		if (auds == null) {
+			auds = GetComponent<AudioSource> ();
+		}
+
 	}
 		
 	

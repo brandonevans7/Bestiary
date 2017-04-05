@@ -10,6 +10,8 @@ public class BeastManager : MonoBehaviour {
 
 	public GameObject Poo;
 
+	public int maxRarity = 15;
+
 	private bool foodOut;
 
 	// Use this for initialization
@@ -97,7 +99,7 @@ public class BeastManager : MonoBehaviour {
 
 			//spawn beast based on random rarity.  Anything has a shot 
 			//CHANGE LATER!!!
-			int rand = Random.Range(1,15);
+			int rand = Random.Range(1,maxRarity);
 
 			if (Beast [x].rarity >= rand) {
 				return true;
@@ -115,6 +117,7 @@ public class BeastManager : MonoBehaviour {
 	{
 		var obj = (GameObject)Instantiate (Poo, new Vector3(x,y,y),Quaternion.identity);
 		obj.GetComponent<CollectGold> ().goldamt = gold;
+		obj.GetComponent<SoundOnClick> ().auds = gameObject.GetComponent<AudioSource> ();
 
 //		Instantiate (Poo, new Vector3(x,y,y),Quaternion.identity);
 	}
