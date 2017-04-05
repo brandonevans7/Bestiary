@@ -18,44 +18,50 @@ public class FoodTimeManager : MonoBehaviour {
 
 
 	public SpriteRenderer spriteR;
-	public Sprite newSprite;
-	Sprite oldSprite;
+
+	public GameObject shop;
+	public Sprite emptyFood;
+	public Sprite kibbleFood;
+	public Sprite crystalFood;
+
+	public string foodType;
+
 
 	public Text message;
 
 	// Use this for initialization
 	void Start () {
-		
-		spriteR = GetComponentInChildren<SpriteRenderer>();
-		oldSprite = spriteR.sprite;
 
 		if(PlayerPrefs.HasKey("foodExpire"))
 		{
 			long temp = Convert.ToInt64(PlayerPrefs.GetString("foodExpire"));
 			foodExpire = DateTime.FromBinary(temp);
 		}
+		if(PlayerPrefs.HasKey("foodType"))
+		{
+
+			foodType = PlayerPrefs.GetString ("foodType");
+
+		}
 		currentTime = DateTime.Now;
 		CheckIfFoodOut();
+
 	}
 
 	// Update is called once per frame
 	void Update () {
 		currentTime = DateTime.Now;
 
-		CheckIfFoodOut ();
-
 	}
 	void OnMouseDown()  
 	{
-		if (!foodOut) 
-		{
-			foodExpire = currentTime.AddSeconds (foodDurration);
-		}
+		shop.SetActive (true);
 
 	}
 	void OnDestroy()
 	{
 		PlayerPrefs.SetString("foodExpire", foodExpire.ToBinary().ToString());
+		PlayerPrefs.SetString("foodType", foodType.ToString());
 	}
 
 	void CheckIfFoodOut()
@@ -63,15 +69,31 @@ public class FoodTimeManager : MonoBehaviour {
 		if (foodExpire > currentTime) 
 		{
 
-			foodOut = true;
-			spriteR.sprite = newSprite;
-			message.text = "now come back later to see if anything shows up";
+			AddFood (foodType);
 
 		}
 		else
 		{
-			spriteR.sprite = oldSprite;
+			spriteR.sprite = emptyFood;
 			foodOut = false;
+		}
+	}
+	public void AddFood(string type)
+	{
+		foodExpire = currentTime.AddSeconds (foodDurration);
+		foodOut = true;
+
+		foodType = type;
+
+		message.text = "now come back later to see if anything shows up";
+
+		if (type == "kibble") 
+		{
+			spriteR.sprite = kibbleFood;
+		}
+		if (type == "crystal") 
+		{
+			spriteR.sprite = crystalFood;
 		}
 	}
 		

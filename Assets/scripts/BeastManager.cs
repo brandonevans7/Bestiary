@@ -117,9 +117,8 @@ public class BeastManager : MonoBehaviour {
 	{
 		var obj = (GameObject)Instantiate (Poo, new Vector3(x,y,y),Quaternion.identity);
 		obj.GetComponent<CollectGold> ().goldamt = gold;
-		obj.GetComponent<SoundOnClick> ().auds = gameObject.GetComponent<AudioSource> ();
+		obj.GetComponent<SoundOnClick> ().auds = this.gameObject.GetComponent<AudioSource> ();
 
-//		Instantiate (Poo, new Vector3(x,y,y),Quaternion.identity);
 	}
 
 	void OnDestroy()
