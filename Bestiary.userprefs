@@ -1,14 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Food\FoodTimeManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\BestiaryManager.cs">
     <Files>
-      <File FileName="Assets\scripts\SoundOnClick.cs" Line="24" Column="1" />
-      <File FileName="Assets\scripts\ClickToDisableParent.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Food\KibbleButton.cs" Line="4" Column="1" />
-      <File FileName="Assets\scripts\Food\CrystalButton.cs" Line="26" Column="16" />
-      <File FileName="Assets\scripts\Food\FoodTimeManager.cs" Line="98" Column="3" />
-      <File FileName="Assets\scripts\BeastManager.cs" Line="121" Column="1" />
-      <File FileName="Assets\scripts\GlobalVars.cs" Line="5" Column="1" />
+      <File FileName="Assets\scripts\BeastInfo.cs" Line="5" Column="35" />
+      <File FileName="Assets\scripts\Shop\LeftArrow.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Shop\CloseMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\UI\menuManager.cs" Line="8" Column="24" />
+      <File FileName="Assets\scripts\Shop\OpenShop.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Shop\shopManager.cs" Line="30" Column="14" />
+      <File FileName="Assets\BestiaryManager.cs" Line="33" Column="3" />
+      <File FileName="Assets\scripts\BeastManager.cs" Line="14" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

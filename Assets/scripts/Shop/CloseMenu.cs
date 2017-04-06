@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CloseMenu : MonoBehaviour {
 
-	public shopManager sm;
+	public menuManager mm;
 
 	void OnMouseDown()
 	{
-		sm.CloseMenu ();
+		mm.CloseMenu ();
 	}
 }
