@@ -101,7 +101,10 @@ public class BeastManager : MonoBehaviour {
 			//CHANGE LATER!!!
 			int rand = Random.Range(1,maxRarity);
 
-			if (Beast [x].rarity >= rand) {
+			string foodType = Food.GetComponent<FoodTimeManager>().foodType;
+
+			if (Beast [x].rarity >= rand  && Beast[x].favFood.ToString() == foodType) 
+			{
 				return true;
 			} else {
 				return false;

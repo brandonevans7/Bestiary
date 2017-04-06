@@ -27,6 +27,11 @@ public class FoodTimeManager : MonoBehaviour {
 	public string foodType;
 
 
+
+	public AudioClip sound;
+	public AudioSource auds;
+
+
 	public Text message;
 
 	// Use this for initialization
@@ -82,6 +87,11 @@ public class FoodTimeManager : MonoBehaviour {
 	{
 		foodExpire = currentTime.AddSeconds (foodDurration);
 		foodOut = true;
+
+//		auds = GetComponent<AudioSource> ();
+//		auds.PlayOneShot(sound, 0.9F);
+
+
 
 		foodType = type;
 
