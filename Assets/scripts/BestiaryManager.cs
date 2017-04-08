@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BestiaryManager : menuManager {
 
@@ -9,6 +10,12 @@ public class BestiaryManager : menuManager {
 	public int currentNum;
 
 	private GameObject currentBeast;
+
+	public GameObject spot;
+
+	public Text info1;
+	public Text info2;
+	public Text info3;
 
 //	public BeastInfo[] Beast;
 
@@ -28,13 +35,20 @@ public class BestiaryManager : menuManager {
 
 	public void CreateBeast()
 	{
-		currentBeast = (GameObject)Instantiate(bm.Beast[currentNum].beast,new Vector3(0.00f,-2.89f,-11),Quaternion.identity);
-//
-//		currentBeast = (GameObject)Instantiate(Beast[currentNum].beast,new Vector3(0f,0f,-1),Quaternion.identity);
+		currentBeast = (GameObject)Instantiate(bm.Beast[currentNum].beast);
+
 		currentBeast.SetActive (true);
 		currentBeast.transform.parent = gameObject.transform;
 		currentBeast.GetComponent<DepthByHeight> ().enabled = false;
-		currentBeast.transform.position = new Vector3 (0f, 0f, -11);
+
+		float beastHeight = currentBeast.GetComponentInChildren<SpriteRenderer> ().bounds.size.y;
+		float offsetY = spot.transform.position.y - (beastHeight / 2);
+		currentBeast.transform.position = new Vector3 (spot.transform.position.x, offsetY, -11f);
+
+		info1.text = bm.Beast [currentNum].info1.ToString();
+		info2.text = bm.Beast [currentNum].info2.ToString();
+		info3.text = bm.Beast [currentNum].info3.ToString();
+
 	}
 
 	public override void NextItem()
