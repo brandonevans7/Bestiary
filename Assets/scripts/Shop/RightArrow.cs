@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RightArrow : MonoBehaviour {
 
-	public shopManager sm;
+	public menuManager mm;
 
 	void OnMouseDown()
 	{
-		sm.NextItem ();
+		mm.NextItem ();
 	}
 }

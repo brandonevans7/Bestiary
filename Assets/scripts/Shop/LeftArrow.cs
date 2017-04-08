@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class LeftArrow : MonoBehaviour {
 
-	public shopManager sm;
+	public menuManager mm;
 
 	void OnMouseDown()
 	{
-		sm.LastItem ();
+		mm.LastItem ();
 	}
 }

@@ -19,7 +19,7 @@ public class DisplayTime : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		theTime = DateTime.Now.ToString("t");
+		theTime = DateTime.Now.ToString("hh:mm tt ");
 		display.text = "Time: "+ theTime;
 
 	}
