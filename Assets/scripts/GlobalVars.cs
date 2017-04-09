@@ -6,6 +6,8 @@ public class GlobalVars: MonoBehaviour  {
 
 	public static int gold;
 
+	public static bool investMode = false;
+
 	// Use this for initialization
 	void Start()
 	{

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 223
-    y: 70
+    x: 77
+    y: 100
     width: 1680
     height: 912
   m_ShowMode: 4
@@ -107,7 +107,7 @@ MonoBehaviour:
     y: 30
     width: 1680
     height: 862
-  m_MinSize: {x: 538, y: 492}
+  m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
   controlID: 22
@@ -231,14 +231,14 @@ MonoBehaviour:
     y: 0
     width: 407
     height: 862
-  m_MinSize: {x: 102, y: 121}
+  m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -287,8 +287,8 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 223
-    y: 119
+    x: 77
+    y: 149
     width: 1012
     height: 841
   m_MaximizeOnPlay: 0
@@ -363,19 +363,19 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 223
-    y: 119
+    x: 77
+    y: 149
     width: 1012
     height: 841
   m_SceneLighting: 0
-  lastFramingTime: 4366.087828993797
+  lastFramingTime: 817.5512230738653
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.89181054, y: -1.1412364, z: 0}
+    m_Target: {x: 0, y: 0, z: -9}
     speed: 2
-    m_Value: {x: 0.89181054, y: -1.1412364, z: 0}
+    m_Value: {x: 0, y: 0, z: -9}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -402,14 +402,14 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.955312
+    m_Target: 8.173006
     speed: 2
-    m_Value: 8.955312
+    m_Value: 8.173006
   m_Ortho:
     m_Target: 1
     speed: 2
     m_Value: 1
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.06694954, y: 0.4180889, z: -0.030915085, w: -0.905408}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -502,15 +502,15 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1239
-    y: 119
+    x: 1093
+    y: 149
     width: 255
     height: 347
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: d8fbffff00000000d4270000
+    scrollPos: {x: 0, y: 166}
+    m_SelectedIDs: d6fbffff
+    m_LastClickedID: -1066
+    m_ExpandedIDs: d8fbffff00000000d4270000fa270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -555,8 +555,8 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1239
-    y: 487
+    x: 1093
+    y: 517
     width: 255
     height: 473
   m_SearchFilter:
@@ -569,8 +569,7 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 0
-    m_Folders:
-    - Assets/scripts
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -581,7 +580,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 10240000
     m_LastClickedID: 9232
-    m_ExpandedIDs: 00000000e4240000fa2400004225000046250000a4250000b4250000c8250000e0250000e22500002e2600006c26000096260000b6260000c2260000
+    m_ExpandedIDs: 00000000e4240000fa2400004225000046250000a4250000b4250000c8250000e025000096260000b6260000c42a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -606,21 +605,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 269}
+    scrollPos: {x: 0, y: 240}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e4240000fa2400004225000046250000a4250000b4250000c8250000e025000096260000b626000010310000
+    m_ExpandedIDs: 00000000e4240000fa2400004225000046250000a4250000b4250000c8250000e025000096260000b6260000c42a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: BeastInfo
-      m_OriginalName: BeastInfo
+      m_Name: Investigatable
+      m_OriginalName: Investigatable
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 1574
+      m_UserData: 26122
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -686,8 +685,8 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1498
-    y: 119
+    x: 1352
+    y: 149
     width: 405
     height: 841
   m_ScrollPosition: {x: 0, y: 0}
@@ -719,7 +718,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1498
-    y: 119
+    x: 1352
+    y: 149
     width: 405
     height: 841

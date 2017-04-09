@@ -20,6 +20,11 @@ public class BeastManager : MonoBehaviour {
 	private bool foodOut;
 
 	// Use this for initialization
+	void Awake(){
+		Screen.fullScreen = false;
+		Screen.SetResolution (500, 888, false);
+	}
+
 	void Start () {
 		InitBeasts ();		
 		SaveActiveBeasts ();
@@ -29,8 +34,6 @@ public class BeastManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		Screen.fullScreen = false;
-		Screen.SetResolution (500, 888, false);
 	}
 
 	void InitBeasts()
@@ -131,6 +134,7 @@ public class BeastManager : MonoBehaviour {
 			// if the beast's expiration time is later than now, it can spawn
 			if (Beast [x].expirationTime > DateTime.Now) 
 			{
+				Beast [x].stillOut = true;
 				return true;
 			}
 

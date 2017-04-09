@@ -12,6 +12,9 @@ public class BeastInfo : MonoBehaviour {
 
 	public DateTime expirationTime;
 	public DateTime emptyTime; // this is bad.  should be based on spot.
+	public bool stillOut = false;
+
+	public int knowledgeLevel;
 
 	public string info1;
 	public string info2;
