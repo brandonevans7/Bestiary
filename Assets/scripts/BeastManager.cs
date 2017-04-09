@@ -43,10 +43,19 @@ public class BeastManager : MonoBehaviour {
 		{
 			Beast[x].beast.SetActive(false);
 
+			if (PlayerPrefs.HasKey ("beast" + x + "investThisTime")) {
+				if (PlayerPrefs.GetInt ("beast" + x + "investThisTime") == 1) {
+					Beast[x].investThisTime = true;
+				}
+			}
 			if(PlayerPrefs.HasKey("beast"+x+"expiration"))
 			{
 				long temp = Convert.ToInt64(PlayerPrefs.GetString("beast"+x+"expiration"));
 				Beast[x].expirationTime =  DateTime.FromBinary(temp);
+			}
+			if(PlayerPrefs.HasKey("beast"+x+"knowledge"))
+			{
+				Beast [x].knowledgeLevel = PlayerPrefs.GetInt ("beast" + x + "knowledge");
 			}
 
 			if(PlayerPrefs.HasKey("beast"+x+"empty"))
@@ -150,6 +159,7 @@ public class BeastManager : MonoBehaviour {
 
 			if (Beast [x].rarity >= rand  && Beast[x].favFood.ToString() == foodType) 
 			{
+				Beast [x].investThisTime = false;
 				return true;
 			} else {
 				Beast [x].emptyTime = DateTime.Now.AddSeconds (emptyLength);
@@ -175,6 +185,15 @@ public class BeastManager : MonoBehaviour {
 
 	void OnDestroy()
 	{
-		
+		for (int x = 0; x < Beast.Length; x++) {
+
+			PlayerPrefs.SetInt ("beast" + x + "knowledge", Beast [x].knowledgeLevel);
+
+			if (Beast[x].investThisTime == true) {
+				PlayerPrefs.SetInt ("beast" + x + "investThisTime", 1);
+			} else {
+				PlayerPrefs.SetInt ("beast" + x + "investThisTime", 0);
+			}
+		}
 	}
 }

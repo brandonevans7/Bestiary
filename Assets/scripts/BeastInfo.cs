@@ -13,6 +13,7 @@ public class BeastInfo : MonoBehaviour {
 	public DateTime expirationTime;
 	public DateTime emptyTime; // this is bad.  should be based on spot.
 	public bool stillOut = false;
+	public bool investThisTime = false;
 
 	public int knowledgeLevel;
 
@@ -28,10 +29,14 @@ public class BeastInfo : MonoBehaviour {
 	// Use this for initialization
 	void  Awake() {
 		beast = this.gameObject;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+	void OnDestroy (){
+
 	}
 }

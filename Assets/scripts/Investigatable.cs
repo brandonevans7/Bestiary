@@ -16,8 +16,9 @@ public class Investigatable : MonoBehaviour {
 		
 	}
 	void OnMouseDown(){
-		if (GlobalVars.investMode == true) {
+		if (GlobalVars.investMode == true && bi.investThisTime == false) {
 			bi.knowledgeLevel++;
+			bi.investThisTime = true;
 		}
 	}
 }
