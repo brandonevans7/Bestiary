@@ -4,24 +4,17 @@ using UnityEngine;
 
 public class ClickToDismiss : MonoBehaviour {
 
-	protected Animator animator;
+	public Animator animator;
 
 	// Use this for initialization
-	void Start () {
+	public virtual void Start () {
 		animator = GetComponent<Animator> ();
 	}
 
-	void OnMouseDown()
+	public virtual void OnMouseDown()
 	{
 		animator.SetTrigger ("dismiss");
 	}
-	// Update is called once per frame
-	void Update () 
-	{
-		
-	}
-	void Finished()
-	{
-		Destroy (gameObject, 5);
-	}
 }
+
+
