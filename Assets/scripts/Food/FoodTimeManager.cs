@@ -88,11 +88,6 @@ public class FoodTimeManager : MonoBehaviour {
 		foodExpire = currentTime.AddSeconds (foodDurration);
 		foodOut = true;
 
-//		auds = GetComponent<AudioSource> ();
-//		auds.PlayOneShot(sound, 0.9F);
-
-
-
 		foodType = type;
 
 		message.text = "now come back later to see if anything shows up";

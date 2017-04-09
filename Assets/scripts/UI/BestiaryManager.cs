@@ -13,6 +13,8 @@ public class BestiaryManager : menuManager {
 
 	public GameObject spot;
 
+	public Text page;
+
 	public Text info1;
 	public Text info2;
 	public Text info3;
@@ -30,24 +32,44 @@ public class BestiaryManager : menuManager {
 
 	// Update is called once per frame
 	void Update () {
-		
+		page.text = (currentNum+1)+ " / " + (bm.Beast.Length);
 	}
 
 	public void CreateBeast()
 	{
-		currentBeast = (GameObject)Instantiate(bm.Beast[currentNum].beast);
 
-		currentBeast.SetActive (true);
-		currentBeast.transform.parent = gameObject.transform;
-		currentBeast.GetComponent<DepthByHeight> ().enabled = false;
+		if (bm.Beast [currentNum].knowledgeLevel >= 1) 
+		{
+			currentBeast = (GameObject)Instantiate (bm.Beast [currentNum].beast);
 
-		float beastHeight = currentBeast.GetComponentInChildren<SpriteRenderer> ().bounds.size.y;
-		float offsetY = spot.transform.position.y - (beastHeight / 2);
-		currentBeast.transform.position = new Vector3 (spot.transform.position.x, offsetY, -11f);
+			currentBeast.SetActive (true);
+			currentBeast.transform.parent = gameObject.transform;
+			currentBeast.GetComponent<DepthByHeight> ().enabled = false;
 
-		info1.text = bm.Beast [currentNum].info1.ToString();
-		info2.text = bm.Beast [currentNum].info2.ToString();
-		info3.text = bm.Beast [currentNum].info3.ToString();
+			float beastHeight = currentBeast.GetComponentInChildren<SpriteRenderer> ().bounds.size.y;
+			float offsetY = spot.transform.position.y - (beastHeight / 2);
+			currentBeast.transform.position = new Vector3 (spot.transform.position.x, offsetY, -11f);
+		}
+
+		if (bm.Beast [currentNum].knowledgeLevel >= 2) {
+			info1.text = bm.Beast [currentNum].info1.ToString ();
+		} else {
+			info1.text = "---";
+		}
+
+
+		if (bm.Beast [currentNum].knowledgeLevel >= 3) {
+			info2.text = bm.Beast [currentNum].info2.ToString ();
+		} else {
+			info2.text = "---";
+		}
+
+
+		if (bm.Beast [currentNum].knowledgeLevel >= 4) {
+			info3.text = bm.Beast [currentNum].info3.ToString ();
+		} else {
+			info3.text = "---";
+		}
 
 	}
 

@@ -9,7 +9,7 @@ public class GlobalVars: MonoBehaviour  {
 	public static bool investMode = false;
 
 	// Use this for initialization
-	void Start()
+	void Awake()
 	{
 		if(PlayerPrefs.HasKey("gold"))
 		{
