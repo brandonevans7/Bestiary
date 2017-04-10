@@ -74,13 +74,13 @@ public class BeastManager : MonoBehaviour {
 					Beast [x].expirationTime = DateTime.Now.AddSeconds (outLength);
 					PlayerPrefs.SetString ("beast" + x + "expiration", Beast [x].expirationTime.ToBinary ().ToString ());
 
-					Debug.Log (Beast[x].beastName + " expires at " + Beast [x].expirationTime);
+//					Debug.Log (Beast[x].beastName + " expires at " + Beast [x].expirationTime);
 
 				}
 				
 			}
 				
-			//check if a beast was previously active.  if so, create a poo.
+			//check if a beast was previously active, but now expired.  if so, create a poo.
 			if (CheckIfWasActive (x) && (Beast [x].expirationTime < DateTime.Now)) {
 
 				CreatePoo (Beast [x].beast.transform.position.x, Beast [x].beast.transform.position.y,Beast[x].pooAmt);
@@ -164,7 +164,7 @@ public class BeastManager : MonoBehaviour {
 			} else {
 				Beast [x].emptyTime = DateTime.Now.AddSeconds (emptyLength);
 				PlayerPrefs.SetString ("beast" + x + "empty", Beast [x].emptyTime.ToBinary ().ToString ());
-				Debug.Log ( Beast[x].beastName + " will remain empty until " + Beast [x].emptyTime);
+//				Debug.Log ( Beast[x].beastName + " will remain empty until " + Beast [x].emptyTime);
 				return false;
 
 			}

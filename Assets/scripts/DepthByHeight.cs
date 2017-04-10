@@ -12,8 +12,8 @@ public class DepthByHeight : MonoBehaviour {
 	void Start () 
 	{
 		pos = this.transform.position;
-		depth = pos.y;
-		pos.z = depth;
+//		depth = pos.y;
+		pos.z = pos.y;
 
 		this.transform.position = pos;
 	}

@@ -14,6 +14,7 @@ public class BeastInfo : MonoBehaviour {
 	public DateTime emptyTime; // this is bad.  should be based on spot.
 	public bool stillOut = false;
 	public bool investThisTime = false;
+	public bool magic = false;
 
 	public int knowledgeLevel;
 
