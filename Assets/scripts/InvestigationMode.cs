@@ -28,7 +28,6 @@ public class InvestigationMode : MonoBehaviour {
 			for (int x = 0; x < bm.Beast.Length; x++) {
 				//if a beast is able to be investigated
 				if (bm.Beast [x].investThisTime == false) {
-					Debug.Log (bm.Beast [x].name + " can be investigated");
 					bm.Beast [x].magic = true;
 					bm.Beast [x].transform.position = new Vector3 (bm.Beast [x].transform.position.x, bm.Beast [x].transform.position.y, (bm.Beast [x].transform.position.z - 30f));
 				}

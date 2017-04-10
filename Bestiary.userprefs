@@ -1,19 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\BeastManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\InvestigationMode.cs">
     <Files>
-      <File FileName="Assets\scripts\BeastManager.cs" Line="190" Column="76" />
-      <File FileName="Assets\scripts\BeastInfo.cs" Line="40" Column="1" />
+      <File FileName="Assets\scripts\BeastManager.cs" Line="30" Column="10" />
+      <File FileName="Assets\scripts\BeastInfo.cs" Line="17" Column="28" />
       <File FileName="Assets\scripts\UI\menuManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\UI\DisplayTime.cs" Line="5" Column="1" />
-      <File FileName="Assets\scripts\UI\DisplayGold.cs" Line="12" Column="7" />
-      <File FileName="Assets\BookDismiss.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\UI\DisplayTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\UI\DisplayGold.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\ClickToDismiss.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Food\FoodTimeManager.cs" Line="68" Column="49" />
-      <File FileName="Assets\InvestigationMode.cs" Line="34" Column="1" />
-      <File FileName="Assets\scripts\GlobalVars.cs" Line="9" Column="40" />
-      <File FileName="Assets\scripts\DepthByHeight.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Investigatable.cs" Line="21" Column="29" />
+      <File FileName="Assets\scripts\Food\FoodTimeManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\GlobalVars.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\DepthByHeight.cs" Line="15" Column="19" />
+      <File FileName="Assets\scripts\Investigatable.cs" Line="22" Column="29" />
+      <File FileName="Assets\scripts\InvestigationMode.cs" Line="18" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
