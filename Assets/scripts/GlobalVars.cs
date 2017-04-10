@@ -8,6 +8,10 @@ public class GlobalVars: MonoBehaviour  {
 
 	public static bool investMode = false;
 
+	public static int beastsOut = 0;
+
+	public static int beastsInvestigable = 0;
+
 	// Use this for initialization
 	void Awake()
 	{

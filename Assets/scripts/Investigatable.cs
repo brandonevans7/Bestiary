@@ -18,6 +18,7 @@ public class Investigatable : MonoBehaviour {
 	void OnMouseDown(){
 		if (GlobalVars.investMode == true && bi.investThisTime == false) {
 			bi.knowledgeLevel++;
+			GlobalVars.beastsInvestigable--;
 			bi.magic = false;
 			bi.investThisTime = true;
 		}

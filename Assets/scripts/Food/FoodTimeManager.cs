@@ -32,7 +32,7 @@ public class FoodTimeManager : MonoBehaviour {
 	public AudioSource auds;
 
 
-	public Text message;
+//	public Text message;
 
 	// Use this for initialization
 	void Start () {
@@ -90,7 +90,7 @@ public class FoodTimeManager : MonoBehaviour {
 
 		foodType = type;
 
-		message.text = "now come back later to see if anything shows up";
+//		message.text = "now come back later to see if anything shows up";
 
 		if (type == "kibble") 
 		{

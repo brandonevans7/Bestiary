@@ -17,7 +17,8 @@ public class BeastManager : MonoBehaviour {
 	public int outLength = 30;
 	public int emptyLength = 15;
 
-	private bool foodOut;
+	public bool foodOut;
+	public int beastNum = 0;
 
 	// Use this for initialization
 	void Awake(){
@@ -68,6 +69,7 @@ public class BeastManager : MonoBehaviour {
 			if (BeastCanSpawn (x)) {
 				Beast [x].beast.SetActive (true);
 
+				GlobalVars.beastsOut++;
 
 				//if expiration time is earlier than now, set expiration time.
 				if (Beast [x].expirationTime < DateTime.Now) {
@@ -160,6 +162,9 @@ public class BeastManager : MonoBehaviour {
 			if (Beast [x].rarity >= rand  && Beast[x].favFood.ToString() == foodType) 
 			{
 				Beast [x].investThisTime = false;
+
+				GlobalVars.beastsInvestigable++;
+
 				return true;
 			} else {
 				Beast [x].emptyTime = DateTime.Now.AddSeconds (emptyLength);
