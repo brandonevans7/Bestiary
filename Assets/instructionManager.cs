@@ -6,12 +6,10 @@ using UnityEngine.UI;
 public class instructionManager : MonoBehaviour {
 
 	public Text instruction;
-	private BeastManager bm;
 	public FoodTimeManager fm;
 
 	// Use this for initialization
 	void Start () {
-		bm = this.GetComponent<BeastManager> ();
 		
 	}
 	

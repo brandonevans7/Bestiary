@@ -21,10 +21,17 @@ MonoBehaviour:
     y: 30
     width: 1680
     height: 872
+<<<<<<< Updated upstream
   m_MinSize: {x: 713, y: 495}
   m_MaxSize: {x: 18008, y: 14045}
   vertical: 0
   controlID: 2070
+=======
+  m_MinSize: {x: 709, y: 471}
+  m_MaxSize: {x: 18004, y: 14021}
+  vertical: 0
+  controlID: 225
+>>>>>>> Stashed changes
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -287,10 +294,17 @@ MonoBehaviour:
     y: 0
     width: 259
     height: 872
+<<<<<<< Updated upstream
   m_MinSize: {x: 234, y: 495}
   m_MaxSize: {x: 10004, y: 14045}
   vertical: 1
   controlID: 2071
+=======
+  m_MinSize: {x: 230, y: 471}
+  m_MaxSize: {x: 10000, y: 14021}
+  vertical: 1
+  controlID: 226
+>>>>>>> Stashed changes
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -387,8 +401,8 @@ MonoBehaviour:
     y: 372
     width: 259
     height: 500
-  m_MinSize: {x: 234, y: 271}
-  m_MaxSize: {x: 10004, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
@@ -430,7 +444,12 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 0
+<<<<<<< Updated upstream
     m_Folders: []
+=======
+    m_Folders:
+    - Assets/prefabs/Beasts
+>>>>>>> Stashed changes
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -441,7 +460,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 10240000
     m_LastClickedID: 9232
+<<<<<<< Updated upstream
     m_ExpandedIDs: 0000000032270000822700008427000042280000582800006828000080280000a0280000a4280000b2280000c2280000262900003229000036290000
+=======
+    m_ExpandedIDs: 00000000ce240000e4240000f62400002c250000302500008c2500009c250000b0250000c8250000ca250000162600007c26000098260000a2260000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -469,7 +492,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: bc290000
     m_LastClickedID: 0
+<<<<<<< Updated upstream
     m_ExpandedIDs: 0000000032270000822700008427000042280000582800006828000080280000a0280000a4280000b2280000c2280000262900003229000036290000
+=======
+    m_ExpandedIDs: 00000000ce240000e4240000f62400002c250000302500008c2500009c250000b0250000c8250000ca250000162600007c26000098260000a2260000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

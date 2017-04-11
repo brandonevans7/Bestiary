@@ -17,7 +17,7 @@ public class GlobalVars: MonoBehaviour  {
 	{
 		if(PlayerPrefs.HasKey("gold"))
 		{
-		gold = PlayerPrefs.GetInt ("gold");
+			gold = PlayerPrefs.GetInt ("gold");
 		}
 
 	}

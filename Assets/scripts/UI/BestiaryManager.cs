@@ -15,6 +15,8 @@ public class BestiaryManager : menuManager {
 
 	public Text page;
 
+	public Text beastName;
+
 	public Text info1;
 	public Text info2;
 	public Text info3;
@@ -38,8 +40,7 @@ public class BestiaryManager : menuManager {
 	public void CreateBeast()
 	{
 
-		if (bm.Beast [currentNum].knowledgeLevel >= 1) 
-		{
+		if (bm.Beast [currentNum].knowledgeLevel >= 1) {
 			currentBeast = (GameObject)Instantiate (bm.Beast [currentNum].beast);
 
 			currentBeast.SetActive (true);
@@ -49,6 +50,9 @@ public class BestiaryManager : menuManager {
 			float beastHeight = currentBeast.GetComponentInChildren<SpriteRenderer> ().bounds.size.y;
 			float offsetY = spot.transform.position.y - (beastHeight / 2);
 			currentBeast.transform.position = new Vector3 (spot.transform.position.x, offsetY, -11f);
+			beastName.text = bm.Beast [currentNum].beastName.ToString ();
+		} else {
+			beastName.text = "unknown";
 		}
 
 		if (bm.Beast [currentNum].knowledgeLevel >= 2) {
