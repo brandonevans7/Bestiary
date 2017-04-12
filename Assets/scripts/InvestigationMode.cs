@@ -19,32 +19,46 @@ public class InvestigationMode : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		if (GlobalVars.investMode == false) {
-			GlobalVars.investMode = true;
-			dark.SetActive (true);
-			dark.transform.position = new Vector3 (dark.transform.position.x, dark.transform.position.y, -25f);
-
-			//for all the beasts in beast manager
-			for (int x = 0; x < bm.Beast.Length; x++) {
-				//if a beast is able to be investigated
-				if (bm.Beast [x].investThisTime == false) {
-					bm.Beast [x].magic = true;
-					bm.Beast [x].transform.position = new Vector3 (bm.Beast [x].transform.position.x, bm.Beast [x].transform.position.y, (bm.Beast [x].transform.position.z - 30f));
-				}
-			}
-
-
-
+		if (GlobalVars.investMode == false) 
+		{
+			InvestModeOn ();
 		} else {
-			if (GlobalVars.investMode == true) {
-				GlobalVars.investMode = false;
-				dark.SetActive (false);
+			InvestModeOff ();
+		}
+	}
 
-				for (int x = 0; x < bm.Beast.Length; x++) {
+	public void InvestModeOn ()
+	{
+		GlobalVars.investMode = true;
+		dark.SetActive (true);
+		dark.transform.position = new Vector3 (dark.transform.position.x, dark.transform.position.y, -25f);
 
-					bm.Beast [x].magic = false;
-					bm.Beast [x].transform.position = new Vector3 (bm.Beast [x].transform.position.x, bm.Beast [x].transform.position.y, bm.Beast [x].transform.position.y);
-				}
+		//for all the beasts in beast manager
+		for (int x = 0; x < bm.Beast.Length; x++) 
+		{
+			//if a beast is able to be investigated
+			if (bm.Beast [x].investThisTime == false) 
+			{
+				bm.Beast [x].magic = true;
+				bm.Beast [x].GetComponent<DepthByHeight>().DBH = false;
+				bm.Beast [x].transform.position = new Vector3 (bm.Beast [x].transform.position.x, bm.Beast [x].transform.position.y, (bm.Beast [x].transform.position.z - 30f));
+			}
+		}
+	}
+
+	public void InvestModeOff()
+	{
+		if (GlobalVars.investMode == true) 
+		{
+			GlobalVars.investMode = false;
+			dark.SetActive (false);
+
+			for (int x = 0; x < bm.Beast.Length; x++) 
+			{
+
+				bm.Beast [x].magic = false;
+				bm.Beast [x].GetComponent<DepthByHeight>().DBH = true;
+				bm.Beast [x].transform.position = new Vector3 (bm.Beast [x].transform.position.x, bm.Beast [x].transform.position.y, bm.Beast [x].transform.position.y);
 			}
 		}
 	}

@@ -68,6 +68,7 @@ public class BeastManager : MonoBehaviour {
 			//set beast active if beast can spawn
 			if (BeastCanSpawn (x)) {
 				Beast [x].beast.SetActive (true);
+//				Beast [x].beast.GetComponent<DepthByHeight> ().DBH = true;
 
 				GlobalVars.beastsOut++;
 

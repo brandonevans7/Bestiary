@@ -6,6 +6,8 @@ public class Investigatable : MonoBehaviour {
 
 	private BeastInfo bi;
 
+	public InvestigationMode im;
+
 	// Use this for initialization
 	void Start () {
 		bi = GetComponent<BeastInfo> ();
@@ -21,6 +23,7 @@ public class Investigatable : MonoBehaviour {
 			GlobalVars.beastsInvestigable--;
 			bi.magic = false;
 			bi.investThisTime = true;
+			im.InvestModeOff ();
 		}
 	}
 }

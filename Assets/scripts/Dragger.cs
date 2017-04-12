@@ -13,8 +13,8 @@ public class Dragger : MonoBehaviour {
 
 		if (draggable) 
 		{
-			offset = gameObject.transform.position -
-			Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10.0f));
+			offset = gameObject.transform.position - 
+				Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10.0f));
 		}
 	}
 

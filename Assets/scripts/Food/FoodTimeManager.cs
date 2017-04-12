@@ -74,7 +74,7 @@ public class FoodTimeManager : MonoBehaviour {
 		if (foodExpire > currentTime) 
 		{
 
-			AddFood (foodType);
+			DisplayFood (foodType);
 
 		}
 		else
@@ -85,12 +85,17 @@ public class FoodTimeManager : MonoBehaviour {
 	}
 	public void AddFood(string type)
 	{
-		foodExpire = currentTime.AddSeconds (foodDurration);
+
+		foodExpire = currentTime.AddSeconds (foodDurration);;
+
+		DisplayFood (type); 
+
+	}
+	public void DisplayFood(string type)
+	{
 		foodOut = true;
 
 		foodType = type;
-
-//		message.text = "now come back later to see if anything shows up";
 
 		if (type == "kibble") 
 		{
