@@ -46,8 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\foodTimeDisplay.cs" />
-     <Compile Include="Assets\instructionManager.cs" />
      <Compile Include="Assets\scripts\BeastInfo.cs" />
      <Compile Include="Assets\scripts\BeastManager.cs" />
      <Compile Include="Assets\scripts\BookDismiss.cs" />
@@ -74,6 +72,8 @@
      <Compile Include="Assets\scripts\UI\Shop\OpenShop.cs" />
      <Compile Include="Assets\scripts\UI\Shop\RightArrow.cs" />
      <Compile Include="Assets\scripts\UI\Shop\shopManager.cs" />
+     <Compile Include="Assets\scripts\UI\foodTimeDisplay.cs" />
+     <Compile Include="Assets\scripts\UI\instructionManager.cs" />
      <Compile Include="Assets\scripts\UI\menuManager.cs" />
      <Compile Include="Assets\scripts\magicController.cs" />
      <Compile Include="Assets\scripts\randomSpritePicker.cs" />
