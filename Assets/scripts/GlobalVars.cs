@@ -27,4 +27,10 @@ public class GlobalVars: MonoBehaviour  {
 		PlayerPrefs.SetInt ("gold", gold);
 	}
 
+	void OnApplicationPause(bool pauseStatus)
+	{
+		PlayerPrefs.Save();
+	}
+
 }
+

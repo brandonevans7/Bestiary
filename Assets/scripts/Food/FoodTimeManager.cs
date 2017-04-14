@@ -37,10 +37,9 @@ public class FoodTimeManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		if(PlayerPrefs.HasKey("foodExpire"))
+		if(PlayerPrefs.HasKey("foodExpiration"))
 		{
-			long temp = Convert.ToInt64(PlayerPrefs.GetString("foodExpire"));
-			foodExpire = DateTime.FromBinary(temp);
+			foodExpire = new DateTime( long.Parse( PlayerPrefs.GetString( "foodExpiration" ) ) );
 		}
 		if(PlayerPrefs.HasKey("foodType"))
 		{
@@ -65,7 +64,8 @@ public class FoodTimeManager : MonoBehaviour {
 	}
 	void OnDestroy()
 	{
-		PlayerPrefs.SetString("foodExpire", foodExpire.ToBinary().ToString());
+		PlayerPrefs.SetString("foodExpiration", "" + foodExpire.Ticks);
+		Debug.Log (foodExpire.Ticks);
 		PlayerPrefs.SetString("foodType", foodType.ToString());
 	}
 
@@ -86,7 +86,8 @@ public class FoodTimeManager : MonoBehaviour {
 	public void AddFood(string type)
 	{
 
-		foodExpire = currentTime.AddSeconds (foodDurration);;
+		foodExpire = currentTime.AddSeconds (foodDurration);
+		Debug.Log ("new expire " + foodExpire);
 
 		DisplayFood (type); 
 
