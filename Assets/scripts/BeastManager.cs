@@ -49,20 +49,20 @@ public class BeastManager : MonoBehaviour {
 					Beast[x].investThisTime = true;
 				}
 			}
-			if(PlayerPrefs.HasKey("beast"+x+"expiration"))
+			if(PlayerPrefs.HasKey("beast"+x+"expire"))
 			{
-				long temp = Convert.ToInt64(PlayerPrefs.GetString("beast"+x+"expiration"));
-				Beast[x].expirationTime =  DateTime.FromBinary(temp);
+//				long temp = Convert.ToInt64(PlayerPrefs.GetString("beast"+x+"expiration"));
+				Beast[x].expirationTime =  new DateTime( long.Parse( PlayerPrefs.GetString( "beast"+x+"expire" ) ) );
 			}
 			if(PlayerPrefs.HasKey("beast"+x+"knowledge"))
 			{
 				Beast [x].knowledgeLevel = PlayerPrefs.GetInt ("beast" + x + "knowledge");
 			}
 
-			if(PlayerPrefs.HasKey("beast"+x+"empty"))
+			if(PlayerPrefs.HasKey("beast"+x+"spotEmpty"))
 			{
-				long temp = Convert.ToInt64(PlayerPrefs.GetString("beast"+x+"empty"));
-				Beast[x].emptyTime =  DateTime.FromBinary(temp);
+//				long temp = Convert.ToInt64(PlayerPrefs.GetString("beast"+x+"empty"));
+				Beast [x].emptyTime = new DateTime (long.Parse (PlayerPrefs.GetString ("beast" + x + "spotEmpty")));
 			}
 
 			//set beast active if beast can spawn
@@ -75,7 +75,7 @@ public class BeastManager : MonoBehaviour {
 				//if expiration time is earlier than now, set expiration time.
 				if (Beast [x].expirationTime < DateTime.Now) {
 					Beast [x].expirationTime = DateTime.Now.AddSeconds (outLength);
-					PlayerPrefs.SetString ("beast" + x + "expiration", Beast [x].expirationTime.ToBinary ().ToString ());
+					PlayerPrefs.SetString ("beast" + x + "expire", ""+Beast [x].expirationTime.Ticks);
 
 //					Debug.Log (Beast[x].beastName + " expires at " + Beast [x].expirationTime);
 
@@ -169,7 +169,7 @@ public class BeastManager : MonoBehaviour {
 				return true;
 			} else {
 				Beast [x].emptyTime = DateTime.Now.AddSeconds (emptyLength);
-				PlayerPrefs.SetString ("beast" + x + "empty", Beast [x].emptyTime.ToBinary ().ToString ());
+				PlayerPrefs.SetString ("beast" + x + "spotEmpty", ""+Beast [x].emptyTime.Ticks);
 //				Debug.Log ( Beast[x].beastName + " will remain empty until " + Beast [x].emptyTime);
 				return false;
 
