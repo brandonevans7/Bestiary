@@ -67,6 +67,7 @@ public class FoodTimeManager : MonoBehaviour {
 		PlayerPrefs.SetString("foodExpiration", "" + foodExpire.Ticks);
 		Debug.Log (foodExpire.Ticks);
 		PlayerPrefs.SetString("foodType", foodType.ToString());
+		PlayerPrefs.Save();
 	}
 
 	void CheckIfFoodOut()

@@ -76,6 +76,7 @@ public class BeastManager : MonoBehaviour {
 				if (Beast [x].expirationTime < DateTime.Now) {
 					Beast [x].expirationTime = DateTime.Now.AddSeconds (outLength);
 					PlayerPrefs.SetString ("beast" + x + "expire", ""+Beast [x].expirationTime.Ticks);
+					PlayerPrefs.Save();
 
 //					Debug.Log (Beast[x].beastName + " expires at " + Beast [x].expirationTime);
 
@@ -99,10 +100,12 @@ public class BeastManager : MonoBehaviour {
 			if (Beast[x].beast.activeSelf)
 			{
 				PlayerPrefs.SetInt ("beast"+x+"active", 1);
+				PlayerPrefs.Save();
 			}
 			else
 			{
 				PlayerPrefs.SetInt ("beast"+x+"active", 0);
+				PlayerPrefs.Save();
 			}
 
 		}
@@ -170,6 +173,7 @@ public class BeastManager : MonoBehaviour {
 			} else {
 				Beast [x].emptyTime = DateTime.Now.AddSeconds (emptyLength);
 				PlayerPrefs.SetString ("beast" + x + "spotEmpty", ""+Beast [x].emptyTime.Ticks);
+				PlayerPrefs.Save();
 //				Debug.Log ( Beast[x].beastName + " will remain empty until " + Beast [x].emptyTime);
 				return false;
 
