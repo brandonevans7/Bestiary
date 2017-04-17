@@ -199,11 +199,29 @@ public class BeastManager : MonoBehaviour {
 		for (int x = 0; x < Beast.Length; x++) {
 
 			PlayerPrefs.SetInt ("beast" + x + "knowledge", Beast [x].knowledgeLevel);
+			PlayerPrefs.Save ();
 
 			if (Beast[x].investThisTime == true) {
 				PlayerPrefs.SetInt ("beast" + x + "investThisTime", 1);
+				PlayerPrefs.Save ();
 			} else {
 				PlayerPrefs.SetInt ("beast" + x + "investThisTime", 0);
+				PlayerPrefs.Save ();
+			}
+		}
+	}
+	void OnApplicationQuit(){
+		for (int x = 0; x < Beast.Length; x++) {
+
+			PlayerPrefs.SetInt ("beast" + x + "knowledge", Beast [x].knowledgeLevel);
+			PlayerPrefs.Save ();
+
+			if (Beast[x].investThisTime == true) {
+				PlayerPrefs.SetInt ("beast" + x + "investThisTime", 1);
+				PlayerPrefs.Save ();
+			} else {
+				PlayerPrefs.SetInt ("beast" + x + "investThisTime", 0);
+				PlayerPrefs.Save ();
 			}
 		}
 	}

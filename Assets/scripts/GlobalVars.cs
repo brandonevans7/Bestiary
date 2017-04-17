@@ -31,6 +31,12 @@ public class GlobalVars: MonoBehaviour  {
 	{
 		PlayerPrefs.Save();
 	}
+	void OnApplicationQuit()
+	{
+		PlayerPrefs.SetInt ("gold", gold);
+		PlayerPrefs.Save();
 
+
+	}
 }
 

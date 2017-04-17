@@ -24,6 +24,7 @@ public class Investigatable : MonoBehaviour {
 			bi.magic = false;
 			bi.investThisTime = true;
 			im.InvestModeOff ();
+
 		}
 	}
 }
