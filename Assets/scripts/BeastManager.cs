@@ -13,6 +13,7 @@ public class BeastManager : MonoBehaviour {
 	public GameObject Poo;
 	public Text instructions;
 
+
 	public int maxRarity = 15;
 	public int outLength = 30;
 	public int emptyLength = 15;

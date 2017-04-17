@@ -26,6 +26,7 @@ public class FoodTimeManager : MonoBehaviour {
 
 	public string foodType;
 
+	public Text debugtext;
 
 
 	public AudioClip sound;
@@ -49,6 +50,8 @@ public class FoodTimeManager : MonoBehaviour {
 		}
 		currentTime = DateTime.Now;
 		CheckIfFoodOut();
+
+		debugtext.text = foodType.ToString() + " was created on " + foodExpire.ToString();
 
 	}
 
@@ -91,6 +94,11 @@ public class FoodTimeManager : MonoBehaviour {
 		Debug.Log ("new expire " + foodExpire);
 
 		DisplayFood (type); 
+
+		PlayerPrefs.SetString("foodExpiration", "" + foodExpire.Ticks);
+		Debug.Log (foodExpire.Ticks);
+		PlayerPrefs.SetString("foodType", foodType.ToString());
+		PlayerPrefs.Save();
 
 	}
 	public void DisplayFood(string type)
