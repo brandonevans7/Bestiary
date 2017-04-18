@@ -12,6 +12,8 @@ public class GlobalVars: MonoBehaviour  {
 
 	public static int beastsInvestigable = 0;
 
+
+
 	// Use this for initialization
 	void Awake()
 	{
@@ -24,19 +26,23 @@ public class GlobalVars: MonoBehaviour  {
 
 	void OnDestroy()
 	{
-		PlayerPrefs.SetInt ("gold", gold);
+		SaveGold ();
 	}
 
-	void OnApplicationPause(bool pauseStatus)
+	void OnApplicationPause()
 	{
-		PlayerPrefs.Save();
+		SaveGold ();
+
 	}
 	void OnApplicationQuit()
 	{
-		PlayerPrefs.SetInt ("gold", gold);
-		PlayerPrefs.Save();
-
+		SaveGold ();
 
 	}
+	public static void SaveGold(){
+		PlayerPrefs.SetInt ("gold", gold);
+		PlayerPrefs.Save();
+	}
+
 }
 

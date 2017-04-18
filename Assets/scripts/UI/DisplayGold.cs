@@ -18,6 +18,7 @@ public class DisplayGold : MonoBehaviour {
 	void Update () {
 
 		display.text = "Gold: "+ GlobalVars.gold;
+		GlobalVars.SaveGold ();
 		
 	}
 }

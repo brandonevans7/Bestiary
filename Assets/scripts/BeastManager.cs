@@ -25,6 +25,8 @@ public class BeastManager : MonoBehaviour {
 	void Awake(){
 		Screen.fullScreen = false;
 		Screen.SetResolution (500, 888, false);
+
+
 	}
 
 	void Start () {
@@ -58,6 +60,7 @@ public class BeastManager : MonoBehaviour {
 			if(PlayerPrefs.HasKey("beast"+x+"knowledge"))
 			{
 				Beast [x].knowledgeLevel = PlayerPrefs.GetInt ("beast" + x + "knowledge");
+//				Debug.Log ("beast " + x+" knowledge loaded for level "+ Beast [x].knowledgeLevel);
 			}
 
 			if(PlayerPrefs.HasKey("beast"+x+"spotEmpty"))
@@ -193,36 +196,36 @@ public class BeastManager : MonoBehaviour {
 		obj.GetComponent<SoundOnClick> ().auds = this.gameObject.GetComponent<AudioSource> ();
 
 	}
+	public void SaveBeastKnowledge(){
+		for (int x = 0; x < Beast.Length; x++) {
+
+			PlayerPrefs.SetInt ("beast" + x + "knowledge", Beast [x].knowledgeLevel);
+			PlayerPrefs.Save ();
+
+			if (Beast[x].investThisTime == true) {
+				PlayerPrefs.SetInt ("beast" + x + "investThisTime", 1);
+				PlayerPrefs.Save ();
+			} else {
+				PlayerPrefs.SetInt ("beast" + x + "investThisTime", 0);
+				PlayerPrefs.Save ();
+			}
+//			Debug.Log ("beast " + x+" knowledge saved for level "+ Beast [x].knowledgeLevel);
+		}
+	}
 
 	void OnDestroy()
 	{
-		for (int x = 0; x < Beast.Length; x++) {
+		SaveBeastKnowledge ();
+//		Debug.Log ("saved on destroy");
 
-			PlayerPrefs.SetInt ("beast" + x + "knowledge", Beast [x].knowledgeLevel);
-			PlayerPrefs.Save ();
-
-			if (Beast[x].investThisTime == true) {
-				PlayerPrefs.SetInt ("beast" + x + "investThisTime", 1);
-				PlayerPrefs.Save ();
-			} else {
-				PlayerPrefs.SetInt ("beast" + x + "investThisTime", 0);
-				PlayerPrefs.Save ();
-			}
-		}
 	}
 	void OnApplicationQuit(){
-		for (int x = 0; x < Beast.Length; x++) {
-
-			PlayerPrefs.SetInt ("beast" + x + "knowledge", Beast [x].knowledgeLevel);
-			PlayerPrefs.Save ();
-
-			if (Beast[x].investThisTime == true) {
-				PlayerPrefs.SetInt ("beast" + x + "investThisTime", 1);
-				PlayerPrefs.Save ();
-			} else {
-				PlayerPrefs.SetInt ("beast" + x + "investThisTime", 0);
-				PlayerPrefs.Save ();
-			}
-		}
+		SaveBeastKnowledge ();
+//		Debug.Log ("saved on application quit");
 	}
+//	void OnApplicationPause(){
+//		SaveBeastKnowledge ();
+//		Debug.Log ("saved on application pause");
+//
+//	}
 }

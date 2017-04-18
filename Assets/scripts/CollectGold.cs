@@ -20,6 +20,7 @@ public class CollectGold : MonoBehaviour {
 
 
 		GlobalVars.gold = GlobalVars.gold + goldamt;
+		GlobalVars.SaveGold ();
 		Destroy (gameObject);
 	}
 }

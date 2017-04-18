@@ -6,6 +6,8 @@ public class Investigatable : MonoBehaviour {
 
 	private BeastInfo bi;
 
+	public BeastManager bm;
+
 	public InvestigationMode im;
 
 	// Use this for initialization
@@ -24,7 +26,7 @@ public class Investigatable : MonoBehaviour {
 			bi.magic = false;
 			bi.investThisTime = true;
 			im.InvestModeOff ();
-
+			bm.SaveBeastKnowledge ();
 		}
 	}
 }
