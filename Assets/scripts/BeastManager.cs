@@ -23,8 +23,8 @@ public class BeastManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake(){
-		Screen.fullScreen = false;
-		Screen.SetResolution (500, 888, false);
+//		Screen.fullScreen = false;
+//		Screen.SetResolution (500, 888, false);
 
 
 	}
