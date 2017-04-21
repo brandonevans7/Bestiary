@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalVars: MonoBehaviour  {
 
@@ -42,6 +43,11 @@ public class GlobalVars: MonoBehaviour  {
 	public static void SaveGold(){
 		PlayerPrefs.SetInt ("gold", gold);
 		PlayerPrefs.Save();
+	}
+
+	void OnApplicationFocus(){
+		Scene loadedLevel = SceneManager.GetActiveScene ();
+		SceneManager.LoadScene (loadedLevel.buildIndex);
 	}
 
 }
