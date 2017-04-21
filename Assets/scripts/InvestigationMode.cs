@@ -32,6 +32,7 @@ public class InvestigationMode : MonoBehaviour {
 		GlobalVars.investMode = true;
 		dark.SetActive (true);
 		dark.transform.position = new Vector3 (dark.transform.position.x, dark.transform.position.y, -25f);
+		dark.GetComponentInChildren<ParticleSystem> ().Play();
 
 		//for all the beasts in beast manager
 		for (int x = 0; x < bm.Beast.Length; x++) 

@@ -11,6 +11,7 @@ public class BookDismiss : ClickToDismiss {
 		animator = GetComponent<Animator> ();
 
 		dark.SetActive(true);
+		dark.GetComponentInChildren<ParticleSystem> ().Stop();
 	}
 
 	public override void OnMouseDown()
