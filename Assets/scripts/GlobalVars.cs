@@ -46,7 +46,7 @@ public class GlobalVars: MonoBehaviour  {
 	}
 
 	void OnApplicationFocus(bool focus){
-		if (focus) {
+		if (!focus) {
 			Scene loadedLevel = SceneManager.GetActiveScene ();
 			SceneManager.LoadScene (loadedLevel.buildIndex);
 		}

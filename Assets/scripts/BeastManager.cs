@@ -32,6 +32,7 @@ public class BeastManager : MonoBehaviour {
 	void Start () {
 		InitBeasts ();		
 		SaveActiveBeasts ();
+		SaveBeastKnowledge ();
 
 	}
 	
