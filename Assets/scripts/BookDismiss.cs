@@ -7,6 +7,8 @@ public class BookDismiss : ClickToDismiss {
 
 	public GameObject dark;
 
+	public GameObject menu;
+
 	public override void Start () {
 		animator = GetComponent<Animator> ();
 
@@ -18,10 +20,12 @@ public class BookDismiss : ClickToDismiss {
 	{
 		animator.SetTrigger ("dismiss");
 		dark.SetActive(false);
+
 	}
 
 	void Finished()
 	{
 		Destroy (gameObject, 5);
+		menu.SetActive (true);
 	}
 }

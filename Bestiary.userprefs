@@ -1,12 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\magicController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\UI\menuManager.cs">
     <Files>
       <File FileName="Assets\scripts\GlobalVars.cs" Line="50" Column="4" />
       <File FileName="Assets\scripts\UI\Shop\shopManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\magicController.cs" Line="17" Column="18" />
-      <File FileName="Assets\scripts\InvestigationMode.cs" Line="66" Column="2" />
+      <File FileName="Assets\scripts\magicController.cs" Line="24" Column="9" />
+      <File FileName="Assets\scripts\InvestigationMode.cs" Line="55" Column="8" />
       <File FileName="Assets\scripts\BeastInfo.cs" Line="21" Column="22" />
+      <File FileName="Assets\scripts\Investigatable.cs" Line="30" Column="54" />
+      <File FileName="Assets\scripts\BookDismiss.cs" Line="29" Column="25" />
+      <File FileName="Assets\scripts\UI\menuManager.cs" Line="17" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
