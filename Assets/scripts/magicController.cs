@@ -5,10 +5,12 @@ using UnityEngine;
 public class magicController : MonoBehaviour {
 	private BeastInfo bi;
 	public GameObject part;
+	public ParticleSystem burst;
 
 	// Use this for initialization
 	void Start () {
 		bi = this.GetComponent<BeastInfo> ();
+
 	}
 	
 	// Update is called once per frame
@@ -19,4 +21,8 @@ public class magicController : MonoBehaviour {
 			part.SetActive (false);
 		}
 	}
+	public void MagicBurst(){
+		burst.Emit (100);
+	}
+
 }

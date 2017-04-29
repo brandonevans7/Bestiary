@@ -27,6 +27,7 @@ public class Investigatable : MonoBehaviour {
 			bi.investThisTime = true;
 			im.InvestModeOff ();
 			bm.SaveBeastKnowledge ();
+			bi.GetComponent<magicController> ().MagicBurst ();
 		}
 	}
 }
