@@ -27,5 +27,6 @@ public class BookDismiss : ClickToDismiss {
 	{
 		Destroy (gameObject, 5);
 		menu.SetActive (true);
+		menu.GetComponent<Animator> ().SetTrigger ("up");
 	}
 }

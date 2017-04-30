@@ -47,7 +47,7 @@ public class BeastManager : MonoBehaviour {
 		for (int x = 0; x < Beast.Length; x++ )
 		{
 			Beast[x].beast.SetActive(false);				
-			Debug.Log("set " + Beast[x].beast.name + " INACTIVE");
+//			Debug.Log("set " + Beast[x].beast.name + " INACTIVE");
 
 
 			if (PlayerPrefs.HasKey ("beast" + x + "investThisTime")) {
@@ -75,7 +75,7 @@ public class BeastManager : MonoBehaviour {
 			//set beast active if beast can spawn
 			if (BeastCanSpawn (x)) {
 				Beast [x].beast.SetActive (true);
-				Debug.Log("set " + Beast[x].beast.name + " active");
+//				Debug.Log("set " + Beast[x].beast.name + " active");
 //				Beast [x].beast.GetComponent<DepthByHeight> ().DBH = true;
 
 				GlobalVars.beastsOut++;

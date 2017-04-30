@@ -18,11 +18,12 @@ public class BuyButton : MonoBehaviour {
 	}
 	void OnMouseDown()
 	{
+		sm.CloseMenu ();
 		GameObject item = (GameObject)Instantiate(sm.currentitem,new Vector3(0.00f,-2.89f,-11),Quaternion.identity);
 		item.GetComponent<Dragger> ().draggable = true;
 		item.transform.SetParent(b);
 		item.GetComponent<DepthByHeight>().DBH = true;
-		sm.gameObject.SetActive (false);
+
 		//disable button
 		//set object to be draggable
 	}

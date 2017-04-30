@@ -66,7 +66,7 @@ public class FoodTimeManager : MonoBehaviour {
 	void OnDestroy()
 	{
 		PlayerPrefs.SetString("foodExpiration", "" + foodExpire.Ticks);
-		Debug.Log (foodExpire.Ticks);
+//		Debug.Log (foodExpire.Ticks);
 		PlayerPrefs.SetString("foodType", foodType.ToString());
 		PlayerPrefs.Save();
 	}
@@ -94,7 +94,7 @@ public class FoodTimeManager : MonoBehaviour {
 		DisplayFood (type); 
 
 		PlayerPrefs.SetString("foodExpiration", "" + foodExpire.Ticks);
-		Debug.Log (foodExpire.Ticks);
+//		Debug.Log (foodExpire.Ticks);
 		PlayerPrefs.SetString("foodType", foodType.ToString());
 		PlayerPrefs.Save();
 
