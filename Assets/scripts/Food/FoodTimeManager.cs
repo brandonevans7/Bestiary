@@ -35,7 +35,7 @@ public class FoodTimeManager : MonoBehaviour {
 //	public Text message;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 
 		if(PlayerPrefs.HasKey("foodExpiration"))
 		{
@@ -52,6 +52,25 @@ public class FoodTimeManager : MonoBehaviour {
 
 
 	}
+
+//	void Start () {
+//
+//		if(PlayerPrefs.HasKey("foodExpiration"))
+//		{
+//			foodExpire = new DateTime( long.Parse( PlayerPrefs.GetString( "foodExpiration" ) ) );
+//		}
+//		if(PlayerPrefs.HasKey("foodType"))
+//		{
+//
+//			foodType = PlayerPrefs.GetString ("foodType");
+//
+//		}
+//		currentTime = DateTime.Now;
+//		CheckIfFoodOut();
+//
+//
+//	}
+
 
 	// Update is called once per frame
 	void Update () {

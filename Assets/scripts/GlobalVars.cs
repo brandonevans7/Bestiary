@@ -13,11 +13,13 @@ public class GlobalVars: MonoBehaviour  {
 
 	public static int beastsInvestigable = 0;
 
+	public bool refreshOnAway = false;
 
 
 	// Use this for initialization
 	void Awake()
 	{
+		
 		if(PlayerPrefs.HasKey("gold"))
 		{
 			gold = PlayerPrefs.GetInt ("gold");
@@ -46,7 +48,8 @@ public class GlobalVars: MonoBehaviour  {
 	}
 
 	void OnApplicationFocus(bool focus){
-		if (!focus) {
+
+		if (!focus && refreshOnAway) {
 			Scene loadedLevel = SceneManager.GetActiveScene ();
 			SceneManager.LoadScene (loadedLevel.buildIndex);
 		}

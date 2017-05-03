@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ddc7db0b9054ba54b836117f15da2c38
+timeCreated: 1493700140
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Elevenki2Czcionk
+  fontNames:
+  - Elevenki2Czcionk
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

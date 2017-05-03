@@ -14,7 +14,10 @@ public class SpriteChanger : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		toggle = (PlayerPrefs.GetInt("foodOut") != 0);
+		if (PlayerPrefs.HasKey("foodOut"))
+			{
+			toggle = (PlayerPrefs.GetInt("foodOut") != 0);
+			}
 		spriteR = GetComponentInChildren<SpriteRenderer>();
 		oldSprite = spriteR.sprite;
 	}

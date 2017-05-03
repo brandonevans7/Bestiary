@@ -26,6 +26,10 @@ public class BeastManager : MonoBehaviour {
 //		Screen.fullScreen = false;
 //		Screen.SetResolution (500, 888, false);
 
+//
+//		InitBeasts ();		
+//		SaveActiveBeasts ();
+//		SaveBeastKnowledge ();
 
 	}
 
@@ -123,13 +127,22 @@ public class BeastManager : MonoBehaviour {
 
 	bool CheckIfWasActive(int x)
 	{
-		if (PlayerPrefs.GetInt ("beast"+x+"active") == 1) {
-			return true;
-		} 
-		else 
+		if(PlayerPrefs.HasKey("beast"+x+"active"))
 		{
-			return false;
+			
+			if (PlayerPrefs.GetInt ("beast"+x+"active") == 1) {
+				return true;
+			} 
+			else 
+			{
+				return false;
+			}
 		}
+		else
+		{
+				return false;
+		}
+
 	}
 
 	bool FoodIsOut()

@@ -19,7 +19,7 @@ public class foodTimeDisplay : MonoBehaviour {
 
 		TimeSpan remainingTime = (fm.foodExpire - fm.currentTime);
 		if (remainingTime.TotalSeconds > 0) {
-			string remainingTimeString = string.Format ("{0:00}:{1:00}", remainingTime.Minutes, remainingTime.Seconds);
+			string remainingTimeString = string.Format ("{0:D2}:{1:D2}:{2:D2}", remainingTime.Hours, remainingTime.Minutes, remainingTime.Seconds);
 			display.text = "remaining time: \n" + remainingTimeString;
 		} else {
 			display.text = "remaining time: \n 0:00";
